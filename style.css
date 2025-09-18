@@ -1,3 +1,7 @@
+:root{
+  --base_color--:rgb(19, 3, 3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +18,15 @@ button {
 
 /* ============ top headline ==================*/
 .top-headline {
-  background-color: #8b4513;
+  background-color:var(--base_color--);
   color: white;
   text-align: center;
   padding: 5px 0;
   position: relative;
   font-size: 14px;
+  /* display: none; */
 }
+
 .top-headline span {
   font-weight: bold;
 }
@@ -37,8 +43,9 @@ button {
 /* ==============Header==================*/
 
 header {
-  background-image: url("./assets/hero-image.webp");
+  background-image: url("./assets//hero-section.webp");
   background-size: cover;
+  background-position: center;
   color: white;
 }
 
@@ -53,7 +60,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 3%;
+  padding: 15px 3%;
 }
 
 /* logo */
@@ -61,9 +68,10 @@ nav {
 .logo {
   color: white;
   font-size: 45px;
+  font-weight: 900;
 }
 .logo span {
-  color: #8b4513;
+  color: var(--base_color--);
 }
 
 /* navlinks first */
@@ -96,7 +104,7 @@ nav {
 
 .dropdown > li {
   padding: 2px 8px;
-  border: 2px solid #70350c;
+  border: 2px solid var(--base_color--);
   /* transition: 0.1s; */
 }
 
@@ -202,17 +210,17 @@ main {
   left: 5%;
 }
 .category-item-1 {
-  background-image: url("./assets/category/women.webp");
+  background-image: url("./assets/category/category1.webp");
 }
 .category-item-2 {
   grid-row: 2/3;
-  background-image: url("./assets/category/men.webp");
+  background-image: url("./assets/category/category2.webp");
 }
 
 .category-item-3 {
   grid-row: 1/3;
 
-  background-image: url("./assets/category/casual_wear.webp");
+  background-image: url("./assets/category/category3.jpg");
 }
 
 /* ============== shopping cards ================= */
@@ -239,7 +247,7 @@ main {
   transition: 0.2s;
   box-shadow: -3px -1px 10px 2px rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  place-self:center ;
+  place-self: center;
 }
 
 .shopping-card-item:hover {
@@ -268,6 +276,97 @@ main {
 .card-text p {
   font-size: 20px;
 }
+
+/* =============Details container================== */
+
+.details-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  justify-content: center;
+  gap: 20px;
+  padding: 3% 0;
+}
+
+.details-item {
+  border: 15px solid rgb(231, 225, 225);
+   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 25px;
+  text-align: center;
+  padding:15% 6px;
+
+}
+.details-item h3{
+  font-size: 25px;
+  font-weight: 500;
+}
+.details-item p{
+  font-size: 15px;
+  color: rgb(113, 110, 110);
+  
+}
+
+
+
+.detail-icons{
+  padding: 15px;
+  background-color: var(--base_color--);
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ==========video section================== */
+
+
+.video-section{
+  width: auto;
+  height: 600px;
+  padding: 4% 0;
+}
+.video-section video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.foot{
+  padding: 4% 3%;
+  background-color: var(--base_color--);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* justify-content: center;  */
+}
+
+.foot-col{
+  padding: 0 15px;
+}
+.foot-col li{
+  list-style: none;
+  padding: 8px 0;
+}
+
+.foot-col a{
+  color: white;
+  font-size: 18px;
+}
+
+.foot-col h4{
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.foot-col h2{
+  font-size: 50px;
+}
+
 
 /* ==============  Responsiveness  ======================= */
 @media (max-width: 800px) {
@@ -313,8 +412,14 @@ main {
   .shop-card-section h2 {
     font-size: 50px;
     margin-bottom: 20px;
-    
-}
+  }
+
+  /* video section*/
+
+  .video-section{
+  width: auto;
+  height: auto;
+  
 }
 
 @media (max-width: 425px) {
@@ -334,12 +439,12 @@ main {
     font-size: 50px;
   }
 
-
   /* shop card section */
 
   .shop-card-section h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    
+  }
 }
 }
+
