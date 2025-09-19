@@ -96,7 +96,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #d37939;
+  background-color: var(--base_color--);
   display: none;
 
   min-width: 180px;
@@ -104,12 +104,12 @@ nav {
 
 .dropdown > li {
   padding: 2px 8px;
-  border: 2px solid var(--base_color--);
+  border: 2px solid rgb(150, 149, 149);
   /* transition: 0.1s; */
 }
 
 .dropdown > li:hover {
-  background-color: #8b4513;
+  background-color: rgba(145, 144, 144, 0.2);
 }
 
 .navlinks-1 > li:hover .dropdown {
