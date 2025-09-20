@@ -1,5 +1,5 @@
-:root{
-  --base_color--:rgb(19, 3, 3);
+:root {
+  --base_color--: rgb(19, 3, 3);
 }
 
 * {
@@ -18,7 +18,7 @@ button {
 
 /* ============ top headline ==================*/
 .top-headline {
-  background-color:var(--base_color--);
+  background-color: var(--base_color--);
   color: white;
   text-align: center;
   padding: 5px 0;
@@ -171,10 +171,26 @@ nav {
 .hero-text {
   padding-right: 45%;
   padding-left: 3%;
+  opacity: 0; /* shuru me hidden */
+  transform: translateX(50px); /* thoda neeche se start hoga */
+  animation: fadeInUp 2s ease forwards;
 }
 .hero-text h1 {
   font-size: 80px;
+  
 }
+
+@keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
 .hero-text p {
   font-size: 20px;
 }
@@ -281,7 +297,7 @@ main {
 
 .details-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   justify-content: center;
   gap: 20px;
   padding: 3% 0;
@@ -289,28 +305,24 @@ main {
 
 .details-item {
   border: 15px solid rgb(231, 225, 225);
-   grid-row: span 2;
+  grid-row: span 2;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   gap: 25px;
   text-align: center;
-  padding:15% 6px;
-
+  padding: 15% 6px;
 }
-.details-item h3{
+.details-item h3 {
   font-size: 25px;
   font-weight: 500;
 }
-.details-item p{
+.details-item p {
   font-size: 15px;
   color: rgb(113, 110, 110);
-  
 }
 
-
-
-.detail-icons{
+.detail-icons {
   padding: 15px;
   background-color: var(--base_color--);
   color: white;
@@ -321,20 +333,18 @@ main {
 
 /* ==========video section================== */
 
-
-.video-section{
+.video-section {
   width: auto;
   height: 600px;
   padding: 4% 0;
 }
-.video-section video{
+.video-section video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-.foot{
+.foot {
   padding: 4% 3%;
   background-color: var(--base_color--);
   color: white;
@@ -345,28 +355,27 @@ main {
   /* justify-content: center;  */
 }
 
-.foot-col{
+.foot-col {
   padding: 0 15px;
 }
-.foot-col li{
+.foot-col li {
   list-style: none;
   padding: 8px 0;
 }
 
-.foot-col a{
+.foot-col a {
   color: white;
   font-size: 18px;
 }
 
-.foot-col h4{
+.foot-col h4 {
   font-size: 22px;
   margin-bottom: 8px;
 }
 
-.foot-col h2{
+.foot-col h2 {
   font-size: 50px;
 }
-
 
 /* ==============  Responsiveness  ======================= */
 @media (max-width: 800px) {
@@ -416,35 +425,33 @@ main {
 
   /* video section*/
 
-  .video-section{
-  width: auto;
-  height: auto;
-  
+  .video-section {
+    width: auto;
+    height: auto;
+  }
+
+  @media (max-width: 425px) {
+    .logo {
+      font-size: 35px;
+    }
+
+    .navlinks-2 {
+      gap: 6vw;
+    }
+
+    .hero-text p {
+      font-size: 15px;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+    }
+
+    /* shop card section */
+
+    .shop-card-section h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
 }
-
-@media (max-width: 425px) {
-  .logo {
-    font-size: 35px;
-  }
-
-  .navlinks-2 {
-    gap: 6vw;
-  }
-
-  .hero-text p {
-    font-size: 15px;
-  }
-
-  .hero-text h1 {
-    font-size: 50px;
-  }
-
-  /* shop card section */
-
-  .shop-card-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-}
-}
-
